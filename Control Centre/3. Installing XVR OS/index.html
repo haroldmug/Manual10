@@ -1,0 +1,946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2.%20Licensing/">
+      
+      
+        <link rel="next" href="../../OS/1.%20Intro/">
+      
+      
+      <link rel="icon" href="../../assets/circle.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>3. Installing XVR OS - Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-installing-xvr-os" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Manual" class="md-header__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Installing XVR OS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual" class="md-nav__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Control Centre
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Control Centre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.%20The%20Control%20Centre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. The XVR Control Centre interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.%20Licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 Activating the XVR Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. Installing XVR OS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Installing XVR OS
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-fresh-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Fresh installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Fresh installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-xvr-on-a-new-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing XVR on a new computer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-installing-xvr-os-on-top-of-an-older-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Installing XVR OS on top of an older installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Installing XVR OS on top of an older installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-newer-or-other-version-of-xvr-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a newer or other version of XVR OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-an-older-version-of-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling an older version of XVR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-xvr-directly-overnext-to-an-older-version-of-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing XVR directly over/next to an older version of XVR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-viewing-details-on-installed-xvr-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Viewing details on installed XVR software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-after-installing-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 After installing XVR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-ugrading-scenarios-and-favourites-from-previous-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Ugrading scenarios and favourites from previous versions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Ugrading scenarios and favourites from previous versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-downgrading-previously-upgraded-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovering (downgrading) previously upgraded Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/1.%20Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. THE XVR CONTROL CENTRE INTERFACE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/2.%20hoofdstuk%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 Activating the XVR Licence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/3.%20Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Installing XVR OS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-fresh-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Fresh installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Fresh installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-xvr-on-a-new-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing XVR on a new computer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-installing-xvr-os-on-top-of-an-older-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Installing XVR OS on top of an older installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Installing XVR OS on top of an older installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-newer-or-other-version-of-xvr-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a newer or other version of XVR OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-an-older-version-of-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling an older version of XVR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-xvr-directly-overnext-to-an-older-version-of-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing XVR directly over/next to an older version of XVR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-viewing-details-on-installed-xvr-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Viewing details on installed XVR software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-after-installing-xvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 After installing XVR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-ugrading-scenarios-and-favourites-from-previous-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Ugrading scenarios and favourites from previous versions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Ugrading scenarios and favourites from previous versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-downgrading-previously-upgraded-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovering (downgrading) previously upgraded Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-installing-xvr-os">3. Installing XVR OS<a class="headerlink" href="#3-installing-xvr-os" title="Permanent link">&para;</a></h1>
+<h2 id="31-fresh-installation">3.1  Fresh installation<a class="headerlink" href="#31-fresh-installation" title="Permanent link">&para;</a></h2>
+<p>This section explains how to install XVR on a computer that has never had XVR installed on it before, and how to install XVR on a computer on which another version of XVR has been installed. 
+If you are installing XVR on a computer that already has an (older) version of XVR installed, use the steps explained in the next section. </p>
+<h4 id="installing-xvr-on-a-new-computer">Installing XVR on a new computer<a class="headerlink" href="#installing-xvr-on-a-new-computer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Download the latest XVR installer via the link provided in an e-mail sent by the XVR ServiceDesk, or navigate to the XVR installer on the USB disk sent to you. You can find this file in the folder with the name of the version, e.g. the 2022 version will be in a folder with a name starting with XVR 2022</li>
+<li>Double-click the XVR installer executable (filetype: .exe)</li>
+<li>The computer may ask you if you want to permit the installation. Answer Yes or Allow 
+The installation will start and the first step of the installation wizard will be shown</li>
+<li>Select the language you wish to use when you first launch XVR; this can be changed later.
+The installation wizard is shown full-screen with the XVR background. While this full-screen wizard is shown, the installation is ongoing.  </li>
+<li>Click on Next (clicking Cancel will terminate the installation) 
+After reading the licence agreement and you agree with what you have read, select I accept the agreement and click Next .The installation wizard shows the location where XVR will be installed</li>
+</ul>
+<p>XVR is by default installed in C:\Program Files\XVR Simulation, and a shortcut to XVR CC will be placed on your computer’s desktop. If you wish to use a different folder name or installation location, you can change this now. Then, click Next.</p>
+<p>A summary of the location and name of the XVR software is shown. Once you have checked that everything is correct, click on Install (clicking Back will show the previous step of the installation wizard; clicking Cancel will terminate the installation)</p>
+<p><img alt="CC_7_7_2_Ready_to_Install_ _2021 07 27" src="../images/CC_7_7_2_Ready_to_Install_-_2021-07-27.png" /></p>
+<p>The installation of XVR is now ongoing. The installation bar is gradually filled with a green bar, indicating the progress of the installation. This may take several minutes, depending on your computer. Please be patient. </p>
+<p>Once XVR is installed, the installation wizard asks whether you want to install a few supporting Microsoft programs. These Windows programs are required to ensure that XVR functions correctly:
+* MS visual C++ 2010 Redistributable
+* MS visual C++ 2010 Redistributable 64Bit (if your computer is running a 64Bits operating system)
+* MS .NET Framework 4 Full Redistributable </p>
+<p>These programs are automatically selected to be installed. Unless you are sure that your computer already has these programs, do not unselect them. Click Next to continue and the selected programs are being installed
+As long as the orange XVR background is shown, the installation is still ongoing.</p>
+<p>When the orange XVR background disappears, the installation process is complete. You will find a shortcut to launch XVR CC on your computer’s desktop and you can find all installed XVR software modules in your Programs overview. </p>
+<h2 id="32-installing-xvr-os-on-top-of-an-older-installation">3.2 Installing XVR OS on top of an older installation<a class="headerlink" href="#32-installing-xvr-os-on-top-of-an-older-installation" title="Permanent link">&para;</a></h2>
+<p>This section describes how to install XVR on a computer that already has another version of XVR installed on it. It indicates the steps that differ from installing XVR on a computer with no XVR installed on it (see previous section)</p>
+<h4 id="installing-a-newer-or-other-version-of-xvr-os">Installing a newer or other version of XVR OS<a class="headerlink" href="#installing-a-newer-or-other-version-of-xvr-os" title="Permanent link">&para;</a></h4>
+<p>Before running any process to (un)install XVR, it is required to have all software of XVR inactive by closing it down.  </p>
+<blockquote>
+<p>[!IMPORTANT]&gt;</p>
+<p>It is advised to have only one version of XVR installed on your computer. This limits confusion for you and your colleagues about which version of XVR to use. Also, it is advised to have the newest release version of XVR installed, such that your organisation matches the version of XVR used by other users within the XVR Community and gives you the newest features and models.</p>
+<p>[!IMPORTANT]&gt;</p>
+<p>Note that Scenarios opened in a newer version of XVR cannot be opened in an older version of XVR. And that Scenarios created in an older version first need to be upgraded before they can be opened in a newer version of XVR.  </p>
+</blockquote>
+<h4 id="uninstalling-an-older-version-of-xvr">Uninstalling an older version of XVR<a class="headerlink" href="#uninstalling-an-older-version-of-xvr" title="Permanent link">&para;</a></h4>
+<p>If you want to do a clean install you can remove the (older) version first:
+* Back up the contents of your XVR Storage folder first
+* Open your MS Windows Settings menu, listing all programs installed on your computer
+* Find in this list the version of XVR you want to uninstall
+* Select this version of XVR and click Delete
+* The uninstall wizard is shown, asking whether you want to uninstall XVR. Click Yes</p>
+<p>The version of XVR is uninstalled. This may take a few minutes, depending on your computer. The shortcut on your computer’s desktop is deleted. 
+Now follow the steps described in the previous section to install the newest version of XVR.</p>
+<h4 id="installing-xvr-directly-overnext-to-an-older-version-of-xvr">Installing XVR directly over/next to an older version of XVR<a class="headerlink" href="#installing-xvr-directly-overnext-to-an-older-version-of-xvr" title="Permanent link">&para;</a></h4>
+<p>By following the steps described, you can also install XVR directly without first deleting the other already installed version of XVR. The following will happen:
+If a version from the core is installed, the previously installed version of XVR is overwritten by the version of XVR being installed. In the first step of the installation process, you will be asked whether you want to uninstall the current version first. Click on Yes. 
+For example, when XVR OS 10.1 is already installed and you are running the installation of XVR OS 10.2, this results in XVR being updated to the 10.2 version. All Scenarios and favourites have to be upgraded to be able to open them. </p>
+<blockquote>
+<p>[!IMPORTANT]&gt;</p>
+<p>As of 2025 we no longer use year versions. This means that releases are numbered 10.1, 10.2, 10.3 and so on. Previously it was possible to have different yearly versions installed, although you could only run one at a a time. With the numbered versions this is going to be 10 next to 11 and so on.  </p>
+</blockquote>
+<h2 id="33-viewing-details-on-installed-xvr-software">3.3 Viewing details on installed XVR software<a class="headerlink" href="#33-viewing-details-on-installed-xvr-software" title="Permanent link">&para;</a></h2>
+<p>To ensure that all your computers are running the latest (or at least, the same) versions of XVR, the Support&gt;About sub-tab, displayed below, can be used to see exactly which version of XVR is installed on your computer. This tab lists information such as the date of your installation, the name of the installer that was used, and the revision numbers for every individually installed XVR software module.</p>
+<p>This tab also features a button that will copy the displayed information to your clipboard. This is useful if you need to quickly gather and send this information, for example when reporting information to the XVR Servicedesk.
+<img alt="CC 7 7 5 About" src="../images/CC_7_7_5_About.png" /></p>
+<h2 id="34-after-installing-xvr">3.4 After installing XVR<a class="headerlink" href="#34-after-installing-xvr" title="Permanent link">&para;</a></h2>
+<p>After successfully installing XVR, you are advised to pay attention to three things:
+1. When you launch XVR CC for the first time, you will be prompted to activate your organisation’s XVR Licence. It is good practice to also update your license after installing a service pack to make sure you have all the latest objects and features
+2. Check the version information, currently active Licence, network, and firewall settings of every computer with XVR installed. Make sure that all computers have the same version of XVR installed and the same Licence activated. All XVR software must be allowed to send and receive data through the firewall on every computer. After each update, the settings for the firewall might have to be readjusted.
+3. If your computers have had an older version of XVR installed, upgrade the Scenarios and favourites on every computer.</p>
+<h2 id="35-ugrading-scenarios-and-favourites-from-previous-versions">3.5 Ugrading scenarios and favourites from previous versions<a class="headerlink" href="#35-ugrading-scenarios-and-favourites-from-previous-versions" title="Permanent link">&para;</a></h2>
+<p>If you have created Scenarios in prior versions of XVR, you will need to upgrade them by following an automated process before you can use them in the XVR version you are currently using. The figure below shows an example of Scenarios that need upgrading, in which the Open button is replaced by an <strong>Upgrade</strong> button. This button will only be visible when the scenario is made in a previous version of the software.</p>
+<p><img alt="CC 7 7 6 Upgrade" src="../images/CC_7_7_6_Upgrade.png" /></p>
+<p>Before a Scenario is upgraded to be used in the current version, a backup will be made for recovery purposes. These backups will be placed in …\XVR Storage\Backups. This ensures that you will always be able to recover older versions of your Scenarios after you have upgraded them, in case you wish to go back to an older version of XVR</p>
+<h4 id="upgrading-scenarios">Upgrading Scenarios<a class="headerlink" href="#upgrading-scenarios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Make sure you have licensed XVR before you continue</li>
+<li>In XVR CC, go to Build &gt; Scenarios</li>
+<li>All Scenarios in need of upgrading have an Upgrade button and the version name in which they were created marked in yellow</li>
+<li>Select the single Scenario you want to upgrade and click on Upgrade </li>
+<li>Or select multiple Scenarios, by using the Ctrl button and click on Upgrade selected files</li>
+<li>Or to upgrade all outdated Scenarios, click on Upgrade all Scenarios. In all three cases, the upgrade wizard will start. Files that are newer, too old, or already matching, will be excluded from the selection</li>
+<li>Follow the steps of this wizard by selecting all Scenarios to upgrade (Step 1) and click Next step</li>
+<li>In case you have Scenarios made in special versions of XVR – for example a version specifically delivered to your organisation – these Scenarios are marked as ‘made in an experimental version’ and step 2 of the wizard appears. Read the information, check the “I have read the above text, and accept the risk of upgrading these XVR files to/from an experimental version.” and click Next step (clicking Previous step will take you back to step 1 of the wizard)</li>
+<li>The wizard shows a progress overview and all selected Scenarios are upgraded to the currently installed XVR version. Depending on the amount of Scenarios and your computer’s processing speed, this may take a few minutes. </li>
+<li>When all Scenarios are upgraded, the final step of the wizard is shown, listing all successful and all unsuccessful upgraded Scenarios. Click on Close to end the upgrading process 
+All successfully upgraded Scenarios are shown without a yellow-marked version name in the Scenarios sub-tabs. 
+In case a problem occurs during the upgrading process, the last step of the wizard lists the upgrade issues and tips to resolve these problems. Try to resolve the problems as advised or contact the XVR ServiceDesk in case problems persist. There usually is a 2-year maximum version difference taken in account for successful Scenario upgrading. </li>
+</ul>
+<h4 id="recovering-downgrading-previously-upgraded-scenarios">Recovering (downgrading) previously upgraded Scenarios<a class="headerlink" href="#recovering-downgrading-previously-upgraded-scenarios" title="Permanent link">&para;</a></h4>
+<p>Once a Scenario has been upgraded to a newer version of XVR, it can never be opened by older versions. When switching back to an older version of XVR again, you will find yourself wanting to recover the Scenarios you upgraded. XVR CC allows you to do so, assuming the backup created during the upgrade is still present on your computer.</p>
+<h5 id="method-1">Method 1<a class="headerlink" href="#method-1" title="Permanent link">&para;</a></h5>
+<p>First, install the older version of XVR (similar to installing a newer version, as explained before). It is essential that the older version uses the same XVR Storage location as the newer versions, or that all Scenarios and backups match. </p>
+<p>Recovery can only be done for one Scenario at a time. Instead of an ‘Open’ button, newer Scenarios will show a ‘Recover’. When you click <strong>Recover</strong>, you are offered three possible recovery options:
+1. Matching file in backup folder: If a Scenario with the same name (and compatible with the present version) can be found in the backup folder, you will be shown a button that will take you directly to this Scenario.
+2. Backup folder for the current version: If no matching Scenario name can be found in …\XVR Storage\Backups, but there are backups available for the version of XVR you are currently using, you will be shown a button that will open said folder. If the original Scenario exists under a different name, you should be able to find it here.
+3. Backup folder: If no backups are available for the version you are currently using, you can still use the button offered here to go directly to the root of your backup folder. As a last resort, you could try exploring backup folders of versions older than the one you are currently using.</p>
+<p>If you have found a backed-up Scenario that you want to restore to your current …\XVR Storage\Scenarios, you need to manually copy it back into …\XVR Storage\Scenarios. When you refresh the Scenarios sub-tab in XVR CC, the recovered Scenario will show up and you will be able to continue working with it. </p>
+<h5 id="method-2">Method 2<a class="headerlink" href="#method-2" title="Permanent link">&para;</a></h5>
+<p>Another way to make the older scenarios available is:
+* Make a copy of the scenario and the favourite folder from the right version in the back-up directory
+* Uninstall the newer version
+* Install the older version
+* Re-license this older version
+* Move the content of the copies that you made earlier to the scenario and favourite folders in the standard locations</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
