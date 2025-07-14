@@ -1,0 +1,46 @@
+site_name: Manual
+docs_dir: docs
+
+markdown_extensions:
+- toc:
+    permalink: true
+    toc_depth: 4
+
+plugins:
+- search
+
+theme:
+  name: material
+  logo: logo.png
+  favicon: assets/circle.png
+  palette:
+    # Dark Mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Dark mode
+    primary: green
+    accent: deep purple
+
+    # Light Mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Light mode
+    primary: blue
+    accent: deep orange
+
+#  features:
+#    - navigation.expand
+
+# This stub will be replaced in place by generate_nav.py
+nav:
+- Manual: index.md
+- Control Centre:
+  - Control Centre/1. The Control Centre.md
+  - Control Centre/2. Licensing.md
+  - Control Centre/3. Installing XVR OS.md
+- OS:
+  - OS/1. Intro.md
+  - OS/2. hoofdstuk 2.md
+  - OS/3. Chapter 3.md

@@ -1,0 +1,52 @@
+# 1.	The XVR Control Centre interface
+
+The XVR Control Centre, hereafter referred to as XVR CC or CC, is your starting point for using XVR. You start XVR CC like any other Windows program. 
+
+CC is used for changing the overall settings like:
+* Licences
+* User interface language
+* Network settings  
+
+CC is also for:
+* Getting information on how to contact service and support
+* Getting information software versions
+* Using the shortcuts to the Quick Reference Cards or the manuals. 
+
+When XVR is not yet licensed, it will show the licensing screen by default upon start-up. Once an XVR licence has been set, CC will show the Scenarios tab on start-up. All details of licensing XVR can be found in the chapter about activating the XVR Licence. 
+If you like, it is possible to configure XVR CC in the settings menu so that it will automatically start up with Windows.
+
+## 1.1 Overview of the XVR CC INTERFACE
+
+The XVR Control Centre has a basic window layout that keeps the same structure at all times. From top to bottom, it is composed of:
+1.	Top bar
+2.	Tabs
+3.	Sub-tabs 
+4.	Tab content window
+5.	Bottom bar
+
+### 1.1.1 The top bar
+
+The top bar shows the name/year of the Control Centre version that is running, as well as buttons to: 
+1.	Minimise
+2.	Maximise
+3.	Close the Control Centre application
+
+### 1.1.2 Tabs
+
+![CC_1_1_4_Main_tabs_in_XVR_CC_ _2021 07 22](images/CC_1_1_4_Main_tabs_in_XVR_CC_-_2021-07-22.png)
+The functions of the Control Centre are divided into various tabs (see figure above):
+1.	Build tab – aimed at building new and adjusting existing Scenarios and Scenes 
+2.	Train tab – aimed at running instructor-led XVR OS training sessions 
+3.	Self-led tab – aimed at training sessions which can be done by Participants independently 
+4.	Expo server – giving access to Expo server Scenes and settings (only displayed in case your Organisation has access to XVR Expo), explained in detail in the EXPO chapter
+5.	Configuration tab – giving access to settings and licencing 
+6.	Support tab – providing details on the version installed and how to contact the XVR Support team (details also provided in the support chapter) 
+
+
+The currently active tab is highlighted, and clicking any of the other tabs immediately toggles Control Centre to that tab. Each tab has sub-tabs. The content and layout of these sub-tabs can differ from tab to tab.
+### 1.1.3 Bottom bar
+![CC_1_1_6_Bottom_bar_of_XVR_CC_ _2021 07 22](images/CC_1_1_6_Bottom_bar_of_XVR_CC_-_2021-07-22.png)
+The bottom bar contains links to the network overview pop-up and the XVR Storage folder and displays your computer’s name. More info on the network set-up can be found in the chapter “Set-ups and network possibilities”. In case your organisation’s Licence grants access to XVR Expo, the connection status to the Expo server is shown on the right side of the bottom bar. 
+
+
+

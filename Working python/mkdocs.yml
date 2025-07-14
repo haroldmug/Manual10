@@ -1,0 +1,33 @@
+site_name: Manual
+docs_dir: docs
+
+markdown_extensions:
+- toc:
+    permalink: true
+    toc_depth: 4
+
+plugins:
+- search
+
+theme:
+  name: material
+  logo: logo.png
+#  features:
+#    - navigation.expand
+  palette:
+    primary: orange
+    accent: black
+
+# This stub will be replaced in place by generate_nav.py
+nav:
+- Manual: index.md
+- Control Centre:
+  - Control Centre/index.md
+  - Control Centre/1. The Control Centre.md
+  - Control Centre/2. Licensing.md
+  - Control Centre/3. Installing XVR OS.md
+- OS:
+  - OS/index.md
+  - OS/1. Intro.md
+  - OS/2. hoofdstuk 2.md
+  - OS/3. Chapter 3.md
